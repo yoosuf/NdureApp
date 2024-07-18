@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Workout Logs{% endblock %}
+{% block content %}
+<h2>Workout Logs</h2>
+<a href="{% url 'add_workout_log' %}" class="btn btn-primary mb-3">Add Workout Log</a>
+<ul>
+    {% for log in logs %}
+        <li>
+            {{ log.date }} - {{ log.workout_type.name }} - {{ log.duration }} - 
+            <a href="{% url 'edit_workout_log' log.pk %}">Edit</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
