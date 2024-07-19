@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Training Packages{% endblock %}
+{% block content %}
+<h2>Training Packages</h2>
+<a href="{% url 'add_user_package' %}" class="btn btn-primary mb-3">Add Training Package</a>
+<ul>
+    {% for package in packages %}
+        <li>
+            {{ package.package.name }} - Sessions: {{ package.package.sessions }} - Extra Sessions: {{ package.package.extra_sessions }} - Total: {{ package.total_sessions }}
+            <a href="{% url 'edit_user_package' package.pk %}">Edit</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
