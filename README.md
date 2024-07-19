@@ -1,4 +1,4 @@
-# Ndure App
+# NdureApp (Open Source Gym Customer Management and Workout Management Application)
 
 ## Overview
 Ndure is a Django-based application designed to manage users, their workout logs, and training packages. The application supports user authentication, user management, workout types, and workout logs with the ability to associate trainers and training packages. The app also supports multiple time zones for users.
