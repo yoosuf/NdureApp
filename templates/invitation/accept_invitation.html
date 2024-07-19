@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}Sign Up{% endblock %}
+{% block title %}Accept Invitation{% endblock %}
 {% block content %}
-<h2>Sign Up</h2>
+<h2>Accept Invitation</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.non_field_errors }}
@@ -21,6 +21,16 @@
         {{ form.last_name.errors }}
     </div>
     <div class="form-group">
+        <label for="{{ form.date_of_birth.id_for_label }}">Date of Birth:</label>
+        {{ form.date_of_birth }}
+        {{ form.date_of_birth.errors }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.timezone.id_for_label }}">Timezone:</label>
+        {{ form.timezone }}
+        {{ form.timezone.errors }}
+    </div>
+    <div class="form-group">
         <label for="{{ form.password1.id_for_label }}">Password:</label>
         {{ form.password1 }}
         {{ form.password1.errors }}
@@ -30,6 +40,6 @@
         {{ form.password2 }}
         {{ form.password2.errors }}
     </div>
-    <button type="submit" class="btn btn-primary">Sign Up</button>
+    <button type="submit" class="btn btn-primary">Accept Invitation</button>
 </form>
 {% endblock %}

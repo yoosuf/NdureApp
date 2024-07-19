@@ -21,6 +21,16 @@
         {{ form.last_name.errors }}
     </div>
     <div class="form-group">
+        <label for="{{ form.date_of_birth.id_for_label }}">Date of Birth:</label>
+        {{ form.date_of_birth }}
+        {{ form.date_of_birth.errors }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.timezone.id_for_label }}">Timezone:</label>
+        {{ form.timezone }}
+        {{ form.timezone.errors }}
+    </div>
+    <div class="form-group">
         <label for="{{ form.password1.id_for_label }}">Password:</label>
         {{ form.password1 }}
         {{ form.password1.errors }}

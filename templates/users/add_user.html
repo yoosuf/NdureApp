@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% block title %}Add Workout Log{% endblock %}
+{% block title %}Add Training Package{% endblock %}
 {% block content %}
-<h2>Add Workout Log</h2>
+<h2>Add Training Package</h2>
 <form method="post">
     {% csrf_token %}
     {{ form|crispy }}
